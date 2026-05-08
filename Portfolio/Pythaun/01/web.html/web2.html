@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register a Report - RapidReport</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <a href="web.html">Go to About Page</a>
+</head>
+<body>
+    <header>
+        <h1>Register a Crime Report</h1>
+        <a href="/" class="btn">← Home</a>
+    </header>
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        <form method="POST" class="form-box">
+            <label>Crime Type:</label>
+            <input type="text" name="crime_type" required>
+
+            <label>Location of Incident:</label>
+            <input type="text" name="location" required>
+
+            <label>Date & Time of Incident:</label>
+            <input type="datetime-local" name="datetime" required>
+
+            <label>Crime Description:</label>
+            <textarea name="description" required></textarea>
+
+            <label>Suspect Description (optional):</label>
+            <textarea name="suspect"></textarea>
+
+            <label>Anonymous Reporter ID (optional):</label>
+            <input type="text" name="reporter_id">
+
+            <button type="submit" class="btn">Submit Report</button>
+        </form>
+    </main>
+</body>
+</html>

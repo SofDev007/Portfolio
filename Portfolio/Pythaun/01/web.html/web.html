@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel - RapidReport</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+    function showPopup() {
+        alert("⚠️ Database limit (100) reached. Please export the records.");
+    }
+    </script>
+</head>
+<body onload="{{ 'showPopup()' if show_popup else '' }}">
+    <header>
+        <h1>Admin Panel</h1>
+        <a href="/" class="btn">← Home</a>
+    </header>
+    <main>
+        <p>Total Reports Submitted: {{ report_count }}</p>
+        {% if show_popup %}
+            <p style="color:red;">⚠️ Please extract the report data from the database.</p>
+        {% endif %}
+    </main>
+</body>
+</html>

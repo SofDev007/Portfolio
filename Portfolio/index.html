@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arnav Jaiswal — Creative Coder | Photographer | Explorer</title>
+  <meta name="description" content="Arnav Jaiswal - Creative coder, photographer, explorer. Passionate about AI and software development." />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="icon" href="assets/favicon_32x32.jpg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero">Arnav Jaiswal</a>
+
+      <nav class="nav">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-list" id="navList">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#photo">Photography</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="btn-icon" aria-label="Toggle theme">
+          <span class="name" style="font-size:1.3rem;">Theme</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div>
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">↑</button>
+  </div>
+
+  <canvas id="particles"></canvas>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Hii, I’m <span class="name">Arnav Jaiswal</span></h1>
+          <p class="subtitle">
+            <span class="typed-wrapper">
+              <span id="typed-line"></span>
+            </span>
+          </p>
+
+          <p class="lead" style="font-size: 1.2rem">Always curious. Always coding.</p>
+
+          <div class="hero-ctas">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+          </div>
+
+          <div class="social-row">
+            <a class="social" href="https://www.linkedin.com/in/arnav-jaiswal-b12460363" target="_blank">LinkedIn</a>
+            <a class="social" href="https://www.instagram.com/jaiswal.ar9av/" target="_blank">Instagram</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="portrait-placeholder">
+            <img src="assets/portrait.jpg" alt="my photo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container reveal">
+        <div class="about-grid">
+          <div class="about-text">
+            <h1>About</h1>
+            <p>
+              Passionate about AI and software development. Exploring and building real-world projects with fellow tech enthusiasts.
+            </p>
+            <p class="small">
+              <strong>Interests:</strong> Web development, databases, photography, chess.
+            </p>
+
+            <a href="assets/Arnav Jaiswal Resume.pdf" class="btn resume-btn" download>Download Resume</a>
+          </div>
+
+          <div class="about-photo"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="container reveal">
+        <h1>Skills</h1>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Web</h3>
+            <p>HTML · CSS · JavaScript </p>
+            <div class="skill-bar"><span style="width:85%"></span></div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Backend & DB</h3>
+            <p>MongoDB · Node.js · SQL</p>
+            <div class="skill-bar"><span style="width:80%"></span></div>
+          </div>
+
+          <div class="skill-card">
+            <h3>Tools</h3>
+            <p>Git · VS Code · Premier Pro · Photoshop</p>
+            <div class="skill-bar"><span style="width:75%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="container reveal">
+        <h2>Projects</h2>
+        <p class="muted">Selected projects — click to view.</p>
+
+        <div class="projects-grid">
+          
+          <article class="project-card">
+            <div class="project-body">
+              <h3>RapidReport — Crime Reporting System</h3>
+              <p style="font-size: 1.1rem;">DBMS project with reporting UI, SQL storage, and admin features.</p>
+              <div class="project-links">
+                <a href="https://dev-rapidreport.pantheonsite.io/" target="_blank">Visit</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTOGRAPHY -->
+    <section id="photo" class="section photography">
+      <div class="container reveal">
+        <h1>Photography</h1>
+        <p class="muted">Click to view.</p>
+
+        <div class="photo-grid">
+          <div class="photo-item"><img src="assets/PSX_20251028_153600.jpg" alt=""></div>
+          <div class="photo-item"><img src="assets/20251012_085610.jpg" alt=""></div>
+          <div class="photo-item"><img src="assets/_DSC0031_251016_204016.jpg" alt=""></div>
+          <div class="photo-item"><img src="assets/DSCN1354.JPG" alt=""></div>
+
+          <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" src="" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="section reveal">
+      <div class="container">
+        <h2>Achievements & Certifications</h2>
+        <p class="muted">Milestones I’ve earned.</p>
+
+        <div class="achievements-grid">
+          <div class="achievement-card"><img src="assets/SIH.jpg"><h4>SIH 2025</h4></div>
+          <div class="achievement-card"><img src="assets/TCS.png"><h4>TCS iON</h4></div>
+          <div class="achievement-card"><img src="assets/Deloitte.jpg"><h4>Deloitte Forage</h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container reveal">
+        <h1>Contact</h1>
+        <p class="muted">Want to collaborate? Send a message.</p>
+
+        <div class="contact-grid">
+          
+          <!-- FIXED CONTACT FORM (NO CORS) -->
+          <form id="contactForm"
+                class="contact-form"
+                method="POST"
+                action="https://script.google.com/macros/s/AKfycbwwoTk-aqQd_pucIKlcDN5ijDSN1_g9syhZPBmUMk_klLyD3o0wmgWnXbJsjDDDq2rORg/exec"
+                novalidate>
+
+            <div class="form-row">
+              <input type="text" id="name" name="name" placeholder="Name" required />
+              <input type="email" id="email" name="email" placeholder="Email" required />
+            </div>
+
+            <textarea id="message" name="message" rows="6" placeholder="Message" required></textarea>
+
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Send Message</button>
+              <p id="formMsg" class="form-msg"></p>
+            </div>
+          </form>
+
+          <aside class="contact-info">
+            <div class="card">
+              <h3>Connect</h3>
+              <p>LinkedIn: <a href="https://www.linkedin.com/in/arnav-jaiswal-b12460363" target="_blank">arnav-jaiswal</a></p>
+              <p>Instagram: <a href="https://www.instagram.com/jaiswal.ar9av/" target="_blank">@instagram</a></p>
+              <p class="muted">Email: <a href="mailto:arnavjaiswal.aj@gmail.com">arnavjaiswal.aj@gmail.com</a></p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="certModal" class="cert-modal">
+    <span class="cert-close">&times;</span>
+    <img id="certModalImg" src="" alt="">
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Arnav Jaiswal - All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
