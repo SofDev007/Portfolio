@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my projects, skills, photography, and achievements.
 
-**Live:** [sofdev007.pythonanywhere.com](ar9av.netlify.app)
+**Live:** [ar9av.netlify.app](ar9av.netlify.app)
 
 ---
 
