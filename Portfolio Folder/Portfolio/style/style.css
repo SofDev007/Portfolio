@@ -169,8 +169,8 @@ body{
     transform 0.45s ease,
     filter 0.45s ease;
 }
-.photo-grid .photo-item:nth-child(3) {
-  object-position: 2rem center;   /* adjust value as you like */
+.photo-grid .photo-item:nth-child(3) img {
+  object-position: center 37%;
 }
 
 /* 3D Lift-Up Hover */
