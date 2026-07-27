@@ -100,36 +100,36 @@
       reveals.forEach(r => obs.observe(r));
     }
 
-    // CONTACT FORM → Google Sheets
-const form = document.getElementById("contactForm");
-const formMsg = document.getElementById("formMsg");
+    // CONTACT FORM → FormSubmit AJAX (returns JSON, CORS enabled)
+    const form = document.getElementById("contactForm");
+    const formMsg = document.getElementById("formMsg");
 
-form.addEventListener("submit", async function (e) {
-  e.preventDefault();
-  formMsg.textContent = "Sending...";
+    if (form && formMsg) {
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        formMsg.textContent = "Sending...";
 
-  const formData = new FormData(form);
+        try {
+          const data = Object.fromEntries(new FormData(form).entries());
+          const response = await fetch("https://formsubmit.co/ajax/arnavjaiswal.aj@gmail.com", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Accept": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
 
-  try {
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbwwoTk-aqQd_pucIKlcDN5ijDSN1_g9syhZPBmUMk_klLyD3o0wmgWnXbJsjDDDq2rORg/exec",
-      {
-        method: "POST",
-        body: formData,      
-        redirect: "follow",
-      }
-    );
+          if (!response.ok) throw new Error("HTTP " + response.status);
 
-    const text = await response.text();
-    console.log("Server Response:", text);
-
-    formMsg.textContent = "Message sent successfully!";
-    form.reset();
-  } catch (err) {
-    console.error("Network Error:", err);
-    formMsg.textContent = "Network error!";
-  }
-});
+          formMsg.textContent = "Message sent successfully! 🎉";
+          form.reset();
+        } catch (err) {
+          console.error("Form submit error:", err);
+          formMsg.textContent = "Something went wrong — email me at arnavjaiswal.aj@gmail.com";
+        }
+      });
+    }
 
     /* Scroll-to-top button (rocket) */
     const scrollBtn = document.getElementById('scrollTopBtn');
