@@ -56,7 +56,8 @@ npx serve Portfolio
 - Email: [arnavjaiswal.aj@gmail.com](mailto:arnavjaiswal.aj@gmail.com)
 - LinkedIn: [arnav-jaiswal-b12460363](https://www.linkedin.com/in/arnav-jaiswal-b12460363)
 - Instagram: [@jaiswal.ar9av](https://www.instagram.com/jaiswal.ar9av/)
-
+- Github: [@sofdev007](https://github.com/SofDev007)
+  
 ---
 
-© 2025 Arnav Jaiswal
+© 2026 Arnav Jaiswal
